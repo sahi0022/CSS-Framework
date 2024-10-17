@@ -1,0 +1,20 @@
+/* _tables.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: $spacing-unit;
+    border: 1px solid $Light-gray;
+  }
+
+  th {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  td{
+    background-color: $white;
+  }
+  
+}

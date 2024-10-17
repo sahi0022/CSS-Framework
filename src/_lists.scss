@@ -1,0 +1,19 @@
+/* _lists.scss */
+ul {
+  list-style-type: none;
+
+  li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+ol {
+  counter-reset: list-counter;
+  
+  li {
+    counter-increment: list-counter;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $border-color;
+  }
+}

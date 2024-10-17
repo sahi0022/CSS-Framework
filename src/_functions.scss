@@ -1,0 +1,14 @@
+/* _functions.scss */
+@use 'sass:math'; 
+@function rem-calc($px-value) {
+    $base-font-size: 16px; 
+    @return math.div($px-value, $base-font-size) * 1rem; 
+}
+
+@function darken-color($color, $amount: 10%) {
+    @return mix(black, $color, $amount); // Mix with black to darken
+}
+
+@function lighten-color($color, $amount: 10%) {
+    @return color.scale($color, $lightness: $amount);
+}

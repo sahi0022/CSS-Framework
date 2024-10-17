@@ -1,0 +1,44 @@
+/* _mixins.scss */
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin button-style($bg-color, $hover-color: darken-color($bg-color, 10%)) {
+  background-color: $bg-color;
+  color: $white;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+      background-color: $hover-color; 
+  }
+}
+
+@mixin center-content($height: 100vh) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: $height;
+}

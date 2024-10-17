@@ -1,0 +1,33 @@
+/* _forms.scss */
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid $Light-gray;
+  border-radius: $border-radius;
+  background-color: $Light-gray; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 2px 5px $Light-gray; 
+  &::placeholder {
+      opacity: 1;
+  }
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: $primary-color; 
+  outline: none;
+  box-shadow: 0 0 5px rgba($primary-color, 0.5); 
+}
+
+select {
+  appearance: none; 
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center; 
+  background-size: 10px; 
+  
+}
+
+textarea {
+  min-height: 100px; 
+  resize: vertical; 
+}

@@ -1,0 +1,14 @@
+/* _reset.scss */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  background: $gradient-color;
+  color: $font-color;
+}
